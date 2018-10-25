@@ -1,6 +1,7 @@
 import os
 from flask import Flask
 from flask_restplus import Api
+from flask_cors import CORS
 import app.config
 
 from app.main.controller.recommendation import Recommentation, TopRecommendation, Ratings
@@ -8,6 +9,7 @@ from app.main.controller.user import User
 from app.main.controller.getip import GetIp
 
 app = Flask(__name__, static_folder=None)
+CORS(app)
 app.secret_key = config.SECRET_KEY
 api = Api(app)
 
