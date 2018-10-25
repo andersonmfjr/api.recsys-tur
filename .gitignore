@@ -185,4 +185,9 @@ app/main/database/*
 app/main/database
 !app/main/database/database.py
 
+./app/main/database/
+./app/main/database/*
+./app/main/database
+!./app/main/database/database.py
+
 # End of https://www.gitignore.io/api/linux,macos,python,visualstudiocode
