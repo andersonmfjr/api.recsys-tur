@@ -162,7 +162,7 @@ def randomize():
         ('SlopeOne', SlopeOne()), ('NMF', NMF(verbose=False))
     ]
 
-    random_ = random.randint(0, len(algorithms))
+    random_ = random.randint(0, len(algorithms)-1)
 
     return algorithms[random_]
 
