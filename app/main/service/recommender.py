@@ -94,10 +94,6 @@ def randomize():
 
     algorithms = [
         (
-            'kNN Basic - Cosine',
-            KNNBasic(sim_options=sim_options_cosine, verbose=False)
-        ),
-        (
             'kNN Basic - MSD',
             KNNBasic(sim_options=sim_options_msd, verbose=False)
         ),
