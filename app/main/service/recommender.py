@@ -92,6 +92,12 @@ def randomize():
         'shrinkage': 0
     }
 
+    # KNN BASIC COSINE
+    # KNN MEANS PEARSON
+    # KNN BASELINE PEARSON
+    # KNN Z PEARSON B
+    # KNN MEANS MSD
+
     algorithms = [
         (
             'kNN Basic - MSD',
@@ -110,14 +116,6 @@ def randomize():
             KNNWithMeans(sim_options=sim_options_cosine, verbose=False)
         ),
         (
-            'kNN Means - MSD',
-            KNNWithMeans(sim_options=sim_options_msd, verbose=False)
-        ),
-        (
-            'kNN Means - Pearson',
-            KNNWithMeans(sim_options=sim_options_pearson, verbose=False)
-        ),
-        (
             'kNN Means - Pearson B',
             KNNWithMeans(sim_options=sim_options_baseline, verbose=False)
         ),
@@ -134,20 +132,12 @@ def randomize():
             KNNWithZScore(sim_options=sim_options_pearson, verbose=False)
         ),
         (
-            'kNN Z - Pearson B',
-            KNNWithZScore(sim_options=sim_options_baseline, verbose=False)
-        ),
-        (
             'kNN Baseline - Cosine',
             KNNBaseline(sim_options=sim_options_cosine, verbose=False)
         ),
         (
             'kNN Baseline - MSD',
             KNNBaseline(sim_options=sim_options_msd, verbose=False)
-        ),
-        (
-            'kNN Baseline - Pearson',
-            KNNBaseline(sim_options=sim_options_pearson, verbose=False)
         ),
         (
             'kNN Baseline - Pearson B',
