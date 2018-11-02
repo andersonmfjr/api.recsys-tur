@@ -98,15 +98,13 @@ def randomize():
     # KNN Z PEARSON B
     # KNN MEANS MSD
     # kNN BASIC PEARSON
+    # KNN BASIC PEARSON B
+    # KNN Z COSINE
 
     algorithms = [
         (
             'kNN Basic - MSD',
             KNNBasic(sim_options=sim_options_msd, verbose=False)
-        ),
-        (
-            'kNN Basic - Pearson B',
-            KNNBasic(sim_options=sim_options_baseline, verbose=False)
         ),
         (
             'kNN Means - Cosine',
@@ -115,10 +113,6 @@ def randomize():
         (
             'kNN Means - Pearson B',
             KNNWithMeans(sim_options=sim_options_baseline, verbose=False)
-        ),
-        (
-            'kNN Z - Cosine',
-            KNNWithZScore(sim_options=sim_options_cosine, verbose=False)
         ),
         (
             'kNN Z - MSD',
