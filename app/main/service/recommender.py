@@ -100,20 +100,22 @@ def randomize():
     # kNN BASIC PEARSON
     # KNN BASIC PEARSON B
     # KNN Z COSINE
+    # --------------------
+    # Baseline Only
+    # SVD
+    # SlopeOne
+    # CoClustering
+    # KNN BASELINE PEARSON
+    # kNN Z - Cosine
+    # kNN Baseline - MSD
+    # kNN Basic - Pearson
+    # kNN Basic - Pearson B
+    # kNN Means - Cosine
+    # kNN Basic - MSD
+    # kNN Z - Pearson B
+    # kNN Means - MSD
 
     algorithms = [
-        (
-            'kNN Basic - MSD',
-            KNNBasic(sim_options=sim_options_msd, verbose=False)
-        ),
-        (
-            'kNN Means - Cosine',
-            KNNWithMeans(sim_options=sim_options_cosine, verbose=False)
-        ),
-        (
-            'kNN Means - Pearson B',
-            KNNWithMeans(sim_options=sim_options_baseline, verbose=False)
-        ),
         (
             'kNN Z - MSD',
             KNNWithZScore(sim_options=sim_options_msd, verbose=False)
@@ -123,20 +125,13 @@ def randomize():
             KNNWithZScore(sim_options=sim_options_pearson, verbose=False)
         ),
         (
-            'kNN Baseline - Cosine',
-            KNNBaseline(sim_options=sim_options_cosine, verbose=False)
+            'SVDpp',
+            SVDpp(verbose=False)
         ),
         (
-            'kNN Baseline - MSD',
-            KNNBaseline(sim_options=sim_options_msd, verbose=False)
-        ),
-        (
-            'kNN Baseline - Pearson B',
-            KNNBaseline(sim_options=sim_options_baseline, verbose=False)
-        ), ('SVD', SVD(verbose=False)), ('SVDpp', SVDpp(verbose=False)),
-        ('Baseline Only', BaselineOnly(verbose=False)),
-        ('CoClustering', CoClustering(verbose=False)),
-        ('SlopeOne', SlopeOne()), ('NMF', NMF(verbose=False))
+            'NMF',
+            NMF(verbose=False)
+        )
     ]
 
     random_ = random.randint(0, len(algorithms)-1)
