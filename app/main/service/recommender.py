@@ -105,9 +105,41 @@ def randomize():
 
     algorithms = [
         (
+            'kNN Z - Cosine',
+            KNNWithZScore(sim_options=sim_options_cosine, verbose=False)
+        ),
+        (
+            'kNN Baseline - MSD',
+            KNNBaseline(sim_options=sim_options_msd, verbose=False)
+        ),
+        (
             'SVDpp',
             SVDpp(verbose=False)
         ),
+        (
+            'kNN Basic - Pearson',
+            KNNBasic(sim_options=sim_options_pearson, verbose=False)
+        ),
+        (
+            'kNN Basic - Pearson B',
+            KNNBasic(sim_options=sim_options_baseline, verbose=False)
+        ),
+        (
+            'kNN Means - Cosine',
+            KNNWithMeans(sim_options=sim_options_cosine, verbose=False)
+        ),
+        (
+            'kNN Basic - MSD',
+            KNNBasic(sim_options=sim_options_msd, verbose=False)
+        ),
+        (
+            'kNN Z - Pearson B',
+            KNNWithZScore(sim_options=sim_options_baseline, verbose=False)
+        ),
+        (
+            'kNN Means - MSD',
+            KNNWithMeans(sim_options=sim_options_msd, verbose=False)
+        )
     ]
 
     random_ = random.randint(0, len(algorithms)-1)
