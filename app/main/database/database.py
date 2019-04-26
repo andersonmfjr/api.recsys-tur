@@ -5,10 +5,10 @@ import pandas as pd
 class Database:
     def __init__(self):
         self.con = pymysql.connect(
-            host='xxxx',
-            user='xxxx',
-            password='xxxx',
-            db='xxxx',
+            host='remotemysql.com',
+            user='B1G8Ntn0qq',
+            password='cycfCggUMT',
+            db='B1G8Ntn0qq',
             charset='utf8mb4',
             cursorclass=pymysql.cursors.DictCursor
         )

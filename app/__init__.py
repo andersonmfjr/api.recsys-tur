@@ -16,7 +16,7 @@ api = Api(app)
 api.add_resource(Recommentation, '/evaluation', '/evaluation/<int:user_id>')
 api.add_resource(TopRecommendation, '/suggestion', '/suggestion/<int:user_id>')
 api.add_resource(User, '/users', '/users/<int:id>')
-api.add_resource(GetIp, '/machine/ip')
+# api.add_resource(GetIp, '/machine/ip')
 api.add_resource(Ratings, '/ratings')
 
 if __name__ == '__main__':
