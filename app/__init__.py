@@ -6,7 +6,6 @@ import app.config
 
 from app.main.controller.recommendation import Recommentation, TopRecommendation, Ratings
 from app.main.controller.user import User
-from app.main.controller.getip import GetIp
 
 app = Flask(__name__, static_folder=None)
 CORS(app)
@@ -16,7 +15,6 @@ api = Api(app)
 api.add_resource(Recommentation, '/evaluation', '/evaluation/<int:user_id>')
 api.add_resource(TopRecommendation, '/suggestion', '/suggestion/<int:user_id>')
 api.add_resource(User, '/users', '/users/<int:id>')
-# api.add_resource(GetIp, '/machine/ip')
 api.add_resource(Ratings, '/ratings')
 
 if __name__ == '__main__':

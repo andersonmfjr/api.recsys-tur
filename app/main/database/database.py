@@ -1,14 +1,19 @@
 import pymysql.cursors
 import pandas as pd
+import os
+from dotenv import load_dotenv
 
+APP_ROOT = os.path.join(os.path.dirname(__file__), '../..')   # refers to application_top
+dotenv_path = os.path.join(APP_ROOT, '.env')
+load_dotenv(dotenv_path)
 
 class Database:
     def __init__(self):
         self.con = pymysql.connect(
-            host='remotemysql.com',
-            user='B1G8Ntn0qq',
-            password='cycfCggUMT',
-            db='B1G8Ntn0qq',
+            host=os.getenv('HOST_DB'),
+            user=os.getenv('USER_DB'),
+            password=os.getenv('PASS_DB'),
+            db=os.getenv('DB_NAME'),
             charset='utf8mb4',
             cursorclass=pymysql.cursors.DictCursor
         )
